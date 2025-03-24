@@ -138,3 +138,53 @@ function Education(props) {
               education={obj}
               key={obj.institution + obj.id}
             ></Education>
+
+
+
+{formData.laboralExperience.map((obj, index) => (
+            <div className="wrap" key={obj.companyName + index}>
+              <label htmlFor="companyName" className="label-form">
+                company name
+                <input
+                  type="text"
+                  name="companyName"
+                  value={obj.companyName}
+                  onChange={(e) => handleChange(e, index)}
+                />
+              </label>
+              <label htmlFor="ciudad" className="label-form">
+                city
+                <input
+                  type="text"
+                  name="ciudad"
+                  value={obj.ciudad}
+                  onChange={(e) => handleChange(e, index)}
+                />
+              </label>
+              <label htmlFor="dateStart" className="label-form">
+                date start
+                <input
+                  type="date"
+                  name="dateStart"
+                  value={obj.dateStart}
+                  onChange={(e) => handleChange(e, index)}
+                />
+              </label>
+              <label htmlFor="dateEnd" className="label-form">
+                date end
+                <input
+                  type="date"
+                  name="dateEnd"
+                  value={obj.dateEnd}
+                  onChange={(e) => handleChange(e, index)}
+                />
+              </label>
+              <label htmlFor="jobDescription" className="label-form">
+                job description
+                <textarea
+                  name="jobDescription"
+                  rows={4}
+                  cols={40}
+                  value={obj.jobDescription}
+                  onChange={(e) => handleChange(e, index)}
+                />
